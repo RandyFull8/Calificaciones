@@ -1,45 +1,39 @@
+
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #3498db, #e74c3c); /* Fondo degradado desde azul a rojo */
+    background: linear-gradient(135deg, #3498db, #e74c3c);
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    flex-direction: column; /* Centra verticalmente en dispositivos móviles */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra en la parte inferior */
-    position: relative; /* Agrega posición relativa para el fondo de carga */
+    min-height: 100vh;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
-/* Capa de fondo semitransparente para ocultar la aplicación */
 #loadingBackground {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(192, 192, 192, 0.9); /* Fondo gris semitransparente */
+    background: rgba(192, 192, 192, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Tarjeta para las letras de carga */
 #loadingCard {
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente de la tarjeta */
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
     text-align: center;
 }
 
-/* Estilos para las letras "B&R" */
-#initialAnimation {
-    font-size: 30px; /* Aumenta el tamaño de las letras */
-    color: #2b343a; /* Cambia el color de las letras de carga */
-  
-    border-radius: 40%; /* Hace que las letras sean un círculo */
-    padding: 16px; /* Añade espacio alrededor de las letras */
-    animation: spin 2s linear infinite; /* Agrega una animación de giro */
+.title {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
 }
 
 .container {
@@ -48,22 +42,39 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
     text-align: center;
-    max-width: 400px; /* Limita el ancho máximo para dispositivos móviles */
+    max-width: 600px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Estilos para dispositivos móviles */
-@media screen and (max-width: 768px) {
-    body {
-        align-items: flex-start;
+@media screen and (max-width: 375px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
     }
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
 }

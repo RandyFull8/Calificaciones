@@ -9,12 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const promedioParciales = document.getElementById("promedioParciales"); // Nuevo elemento para mostrar el promedio de los parciales
 
     initialAnimation.id = "initialAnimation";
-    initialAnimation.textContent = "🐻";
+    initialAnimation.textContent = "";
     document.body.appendChild(initialAnimation);
-
-    setTimeout(() => {
-        initialAnimation.style.display = "none";
-    }, 2000); // La animación se ocultará después de 2 segundos
 
     const updatePromedio = () => {
         const parcial1 = parseFloat(parcial1Input.value);
